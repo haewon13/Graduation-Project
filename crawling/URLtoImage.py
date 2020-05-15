@@ -53,15 +53,15 @@ for imagePath in paths.list_images(args["output"]):
     # initialize if the image should be deleted or not
     delete = False
 
-    # image load
+    # image 로드
     try:
         image = cv2.imread(imagePath)
 
-        # if image is `None` -> can't load it -> delete it
+        # if image is `None` -> 로드 못할시 삭제 
         if image is None:
             delete = True
 
-    # if OpenCV can't load the image -> delete it
+    # if OpenCV can't load the image -> 삭제
     except:
         print("Except")
         delete = True
